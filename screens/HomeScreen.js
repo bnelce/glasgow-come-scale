@@ -13,7 +13,19 @@ export default function HomeScreen({navigation}) {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>    
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>Iniciar protocolo</Text>
+            <Text style={styles.buttonText}>Iniciar protocolo adulto</Text>
+          </RectButton> 
+          <RectButton style={styles.button} onPress={handleButton1}>
+            <Text style={styles.buttonText}>Iniciar protocolo infantil</Text>
+          </RectButton> 
+          <RectButton style={styles.button} onPress={handleButton1}>
+            <Text style={styles.buttonText}>Informações</Text>
+          </RectButton> 
+          <RectButton style={styles.button} onPress={handleButton1}>
+            <Text style={styles.buttonText}>Avalie o app</Text>
+          </RectButton> 
+          <RectButton style={styles.button} onPress={handleButton1}>
+            <Text style={styles.buttonText}>Compartilhe</Text>
           </RectButton> 
       </View>
     </SafeAreaView>

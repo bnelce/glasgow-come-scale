@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { RectButton } from "react-native-gesture-handler";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 export default function RVScreen({route , navigation}) {
 
@@ -17,22 +17,26 @@ export default function RVScreen({route , navigation}) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>    
-        <Text>Resposta Motora</Text>      
+      <ScrollView>
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>4 - Olhos abertos previamente a estimulação</Text>
+            <Text style={styles.buttonText}>5 - Resposta adequada relativamente ao nome, local e data</Text>
           </RectButton> 
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>3 - Abertura ocular após a ordem em tom de voz normal ou alta</Text>
+            <Text style={styles.buttonText}>4 - Resposta não orientada mas comunicação coerente</Text>
           </RectButton>
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>2 - Abertura ocular após a estimulação da extremidade dos dedos</Text>
+            <Text style={styles.buttonText}>3 - Palavras isoladas intelígveis</Text>
           </RectButton>
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>1 - Ausência persistente de abertura ocular, sem fatores de interferência</Text>
+            <Text style={styles.buttonText}>2 - Apenas gemidos</Text>
           </RectButton>
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>NT - Olhos fechado devido a fator local</Text>
+            <Text style={styles.buttonText}>1 - Ausência de resposta auditível, sem fatores de interferência</Text>
           </RectButton> 
+          <RectButton style={styles.button} onPress={handleButton1}>
+            <Text style={styles.buttonText}>NT - Fator que interfere com a comunicação</Text>
+          </RectButton> 
+          </ScrollView>    
       </View>
     </SafeAreaView>
   );

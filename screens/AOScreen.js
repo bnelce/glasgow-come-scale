@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { RectButton } from "react-native-gesture-handler";
+import { Image, View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { FontAwesome } from "@expo/vector-icons";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 export default function AOScreen({navigation}) {
 
@@ -15,23 +16,24 @@ export default function AOScreen({navigation}) {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>    
-        <Text>Resposta Motora</Text>      
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>4 - Olhos abertos previamente a estimulação</Text>
-          </RectButton> 
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>3 - Abertura ocular após a ordem em tom de voz normal ou alta</Text>
-          </RectButton>
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>2 - Abertura ocular após a estimulação da extremidade dos dedos</Text>
-          </RectButton>
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>1 - Ausência persistente de abertura ocular, sem fatores de interferência</Text>
-          </RectButton>
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>NT - Olhos fechado devido a fator local</Text>
-          </RectButton> 
+      <View style={styles.container}> 
+        <ScrollView>        
+            <RectButton style={styles.button} onPress={handleButton1}>
+              <Text style={styles.buttonText}>4 - Olhos abertos previamente a estimulação</Text>
+            </RectButton> 
+            <RectButton style={styles.button} onPress={handleButton1}>
+              <Text style={styles.buttonText}>3 - Abertura ocular após a ordem em tom de voz normal ou alta</Text>
+            </RectButton>
+            <RectButton style={styles.button} onPress={handleButton1}>
+              <Text style={styles.buttonText}>2 - Abertura ocular após a estimulação da extremidade dos dedos</Text>
+            </RectButton>
+            <RectButton style={styles.button} onPress={handleButton1}>
+              <Text style={styles.buttonText}>1 - Ausência persistente de abertura ocular, sem fatores de interferência</Text>
+            </RectButton>
+            <RectButton style={styles.button} onPress={handleButton1}>
+              <Text style={styles.buttonText}>NT - Olhos fechado devido a fator local</Text>
+            </RectButton> 
+        </ScrollView> 
       </View>
     </SafeAreaView>
   );
@@ -52,6 +54,20 @@ const styles = StyleSheet.create({
       width: 90,
       alignSelf: "center",
       margin: 30
+  },
+  pointName: {
+    color: "#322153",
+    fontSize: 28,
+    fontFamily: "Ubuntu_700Bold",
+    marginTop: 24,
+  },
+
+  pointItems: {
+    fontFamily: "Roboto_400Regular",
+    fontSize: 16,
+    lineHeight: 24,
+    marginTop: 8,
+    color: "#6C6C80",
   },
   input: {
       height: 48,

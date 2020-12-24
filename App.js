@@ -6,6 +6,7 @@ import ResultScreen from './screens/ResultScreen';
 import AOScreen from './screens/AOScreen';
 import RVScreen from './screens/RVScreen';
 import RMScreen from './screens/RMScreen';
+import RPScreen from './screens/RPScreen';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,20 @@ function App() {
           component={RMScreen} 
           options={{
             title: 'Resposta Motora',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen 
+          name="RP" 
+          component={RPScreen} 
+          options={{
+            title: 'Reatividade Pupilar',
             headerStyle: {
               backgroundColor: '#f4511e',
             },

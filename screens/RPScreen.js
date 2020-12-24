@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { RectButton, ScrollView } from "react-native-gesture-handler";
+import { RectButton } from "react-native-gesture-handler";
 
-export default function RMScreen({route, navigation}) {
+export default function RPScreen({route, navigation}) {
 
   const valueRM = route.params.value.value;
   
   const handleButton1 = () => {
-    navigation.navigate('RP', {
+    navigation.navigate('Resultado', {
       value: {
         value: 1,
       }
@@ -16,30 +16,17 @@ export default function RMScreen({route, navigation}) {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}> 
-      <ScrollView>
+      <View style={styles.container}>    
+        <Text>Resposta Motora {valueRM}</Text>      
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>6 - Cumprimento de ordens com duas ações</Text>
+            <Text style={styles.buttonText}>2 - Nenhuma reatividade em ambas as pupilas</Text>
           </RectButton> 
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>5 - Elevação da mão acima do nível da clavícula ao estímulo da cabeça ou pescoço</Text>
+            <Text style={styles.buttonText}>1 - Sem reação em apenas uma das pupilas</Text>
           </RectButton>
           <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>4 - Flexão do membro superior ao nível do cotovelo, padrão predominante normal</Text>
+            <Text style={styles.buttonText}>0 - Caso as duas pupilas estejam funcionando normalmente</Text>
           </RectButton>
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>3 - Flexão do membro superior ao nível do cotovelo, padrão predominante claramente anormal</Text>
-          </RectButton>
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>2 - Extensão do membro superior ao nível do cotovelo</Text>
-          </RectButton> 
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>1 - Ausência de movimento dos membros superiores/inferiores, sem fatores de interferência</Text>
-          </RectButton> 
-          <RectButton style={styles.button} onPress={handleButton1}>
-            <Text style={styles.buttonText}>NT - Fator que limita resposta motoraExtensão do membro superior ao nível do cotovelo</Text>
-          </RectButton> 
-          </ScrollView>   
       </View>
     </SafeAreaView>
   );
@@ -48,8 +35,7 @@ export default function RMScreen({route, navigation}) {
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      //marginTop: 40,
-      //marginBottom: 40,
+      marginTop: 40,
       alignItems: 'center'
   },
   title: {
