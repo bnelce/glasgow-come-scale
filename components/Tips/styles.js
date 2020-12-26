@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import colors from '../../constants/Colors';
 
 export const Container = styled.ScrollView.attrs(() => ({
   horizontal: true,
@@ -11,7 +12,7 @@ export const Container = styled.ScrollView.attrs(() => ({
 `;
 
 export const Option = styled.TouchableOpacity`
-  background: ${({ bgColor }) => bgColor};
+  background: ${colors.light.bannerBackground};
   width: 150px;
   height: 200px;
   border-radius: 8px;
@@ -21,8 +22,9 @@ export const Option = styled.TouchableOpacity`
 `;
 
 export const Title = styled.Text`
-  color: #fff;
+  color: ${colors.light.bannerText};
   font-size: 16px;
+  font-weight: bold;
 `;
 
 export const Img = styled.Image`

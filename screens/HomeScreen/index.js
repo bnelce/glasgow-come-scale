@@ -32,7 +32,7 @@ export default function HomeScreen({navigation}) {
   return (
     <Wrapper>
       <Header 
-      colors={['#f4511e', '#AF1E0F']}
+      colors={['#285ECD', '#3D3AAA']}
       >
         <HeaderContainer>
           <Title>Nova</Title>

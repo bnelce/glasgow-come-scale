@@ -1,9 +1,10 @@
   
 import styled from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../constants/Colors';
 
 export const Wrapper = styled.ScrollView`
-  background: #000;
+  background: ${colors.light.background};
   flex: 1;
 `;
 
@@ -72,7 +73,7 @@ export const ActionLabel = styled.Text`
 `;
 
 export const UseBalance = styled.View`
-  background: #1c1c1e;
+  background: #dddddd;
   height: 60px;
   flex-direction: row;
   padding: 0 16px;
@@ -84,6 +85,7 @@ export const UseBalanceTitle = styled.Text`
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  
 `;
 
 export const PaymentMethods = styled.View`
@@ -92,8 +94,9 @@ export const PaymentMethods = styled.View`
 `;
 
 export const PaymentMethodsTitle = styled.Text`
-  color: #8e8e93;
+  color: ${colors.light.bannerText};
   text-transform: uppercase;
+  font-weight: bold;
 `;
 
 export const Card = styled.View`

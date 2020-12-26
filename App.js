@@ -10,6 +10,8 @@ import RPScreen from './screens/RPScreen';
 import InfoECGScreen from './screens/InfoECGScreen';
 import InfoUpdateScreen from './screens/InfoUpdateScreen';
 
+import colors from './constants/Colors';
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
             headerShown: false,
             title: 'Escala de Coma de Glasgow',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: '#091A7A',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -38,7 +40,7 @@ function App() {
           options={{
             title: 'Abertura Ocular',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -52,7 +54,7 @@ function App() {
           options={{
             title: 'Resposta Verbal',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -66,7 +68,7 @@ function App() {
           options={{
             title: 'Resposta Motora',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -80,7 +82,7 @@ function App() {
           options={{
             title: 'Reatividade Pupilar',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -94,7 +96,7 @@ function App() {
           options={{
             title: 'Resultado',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -108,7 +110,7 @@ function App() {
           options={{
             title: 'O que é ECG?',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -122,7 +124,7 @@ function App() {
           options={{
             title: 'O que mudou?',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: colors.light.tint,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {

@@ -2,13 +2,14 @@ import React from 'react';
 import { Image, View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { ScrollView } from "react-native-gesture-handler";
 import img10 from '../../assets/images/10.png'
+import colors from '../../constants/Colors';
 
 export default function InfoUpdateScreen({navigation}) {
 
   
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#000' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.light.background }}>
       <View style={styles.container}> 
         <ScrollView>        
               <Image source={img10} />
@@ -19,8 +20,6 @@ export default function InfoUpdateScreen({navigation}) {
               <Text style={styles.text}>GCS-P = GCS - PRS</Text>
               <Text style={styles.title}>O papel da pontuação GCS-P</Text>
               <Text style={styles.text}>O GCS-P combinado não se destina a substituir o papel de avaliação e relatório separados de cada componente da Escala de Coma de Glasgow e da resposta da pupila no cuidado de pacientes individuais. Ele expande o escore GCS como um índice abreviado simples da gravidade do estado clínico e do prognóstico de um paciente, especialmente em lesões mais graves. Pode ser útil para evitar vieses nas decisões de percepções de médicos individuais, na elaboração de diretrizes e na descrição de resultados em grupos de pacientes. O GCS-P fornece um índice unidimensional de gravidade clínica no qual informações sobre outras características prognósticas importantes, como a idade, podem ser adicionadas em um formato simples que provavelmente será útil na prática clínica.</Text>
-
-
         </ScrollView> 
       </View>
     </SafeAreaView>
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
       flex: 1,
       margin: 20,
       alignItems: 'center',
-      backgroundColor: '#000'
+      backgroundColor: colors.light.background
   },
   logo: {
       flex: 1,
@@ -45,12 +44,12 @@ const styles = StyleSheet.create({
   title: {
     margin: 10,
     fontSize: 22,
-    color: '#fff',
+    color: colors.light.bannerText,
     fontWeight: 'bold',
   },
   text: {
     margin: 10,
     fontSize: 18,
-    color: '#fff',
+    color: colors.light.bannerText,
   }
 })

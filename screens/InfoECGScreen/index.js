@@ -2,13 +2,14 @@ import React from 'react';
 import { Image, View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { ScrollView } from "react-native-gesture-handler";
 import img10 from '../../assets/images/10.png'
+import colors from '../../constants/Colors';
 
 export default function InfoECGScreen({navigation}) {
 
   
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#000' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.light.background }}>
       <View style={styles.container}> 
         <ScrollView>        
               <Image source={img10} />
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
       flex: 1,
       margin: 20,
       alignItems: 'center',
-      backgroundColor: '#000'
+      backgroundColor: colors.light.background
   },
   logo: {
       flex: 1,
@@ -39,12 +40,12 @@ const styles = StyleSheet.create({
   title: {
     margin: 10,
     fontSize: 22,
-    color: '#fff',
+    color: colors.light.bannerText,
     fontWeight: 'bold',
   },
   text: {
     margin: 10,
     fontSize: 18,
-    color: '#fff',
+    color: colors.light.bannerText,
   }
 })

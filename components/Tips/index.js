@@ -6,7 +6,7 @@ import img9 from '../../assets/images/09.png'
 import img10 from '../../assets/images/10.png'
 import img11 from '../../assets/images/11.png'
 // import img12 from '../../assets/images/12.png'
-
+import colors from '../../constants/Colors';
 const onShare = async () => {
   try {
     const result = await Share.share({
@@ -36,19 +36,19 @@ const onFeedback = () => {
 export default function Tips({navigation}) {
   return (
     <Container>
-      <Option bgColor="#f4511e" onPress={() => {navigation.navigate('InfoECG')}}>
+      <Option bgColor={colors.light.bannerBackground}onPress={() => {navigation.navigate('InfoECG')}}>
         <Img source={img10} />
         <Title>O que é a escala de Glasglow?</Title>        
       </Option>
-      <Option bgColor="#f4511e" onPress={() => {navigation.navigate('InfoUpdate')}}>
+      <Option bgColor={colors.light.bannerBackground}onPress={() => {navigation.navigate('InfoUpdate')}}>
         <Img source={img10} />
         <Title>O que mudou?</Title>        
       </Option>
-      <Option bgColor="#f4511e" onPress={onFeedback}>
+      <Option bgColor={colors.light.bannerBackground}onPress={onFeedback}>
         <Img source={img10} />
         <Title>Avalie o app, sua opnião é importante!</Title>        
       </Option>
-      <Option bgColor="#f4511e" onPress={onShare}>
+      <Option bgColor={colors.light.bannerBackground}onPress={onShare}>
         <Img source={img10} />
         <Title>Gostou? Compartilhe o app!</Title>        
       </Option>
