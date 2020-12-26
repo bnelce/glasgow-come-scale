@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { RectButton } from "react-native-gesture-handler";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 export default function HomeScreen({navigation}) {
 
@@ -27,6 +27,23 @@ export default function HomeScreen({navigation}) {
           <RectButton style={styles.button} onPress={handleButton1}>
             <Text style={styles.buttonText}>Compartilhe</Text>
           </RectButton> 
+        <ScrollView
+          horizontal="true"
+          showsHorizontalScrollIndicator="false"
+        >
+          <RectButton style={styles.buttonSuggestion} onPress={handleButton1}>
+            <Text style={styles.buttonSText}>Compartilhe</Text>
+          </RectButton> 
+          <RectButton style={styles.buttonSuggestion} onPress={handleButton1}>
+            <Text style={styles.buttonSText}>Compartilhe</Text>
+          </RectButton> 
+          <RectButton style={styles.buttonSuggestion} onPress={handleButton1}>
+            <Text style={styles.buttonSText}>Compartilhe</Text>
+          </RectButton> 
+          <RectButton style={styles.buttonSuggestion} onPress={handleButton1}>
+            <Text style={styles.buttonSText}>Compartilhe</Text>
+          </RectButton> 
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -96,5 +113,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#fff',
     fontWeight: 'bold',
-  }
+  },
+  buttonSuggestion: {
+    width: 80,
+    marginRight: 16,
+    alignItems: "center",
+  },
+  buttonSText: {
+    margin: 10,
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: 'bold',
+  },
 })

@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/HomeScreen/index';
 import ResultScreen from './screens/ResultScreen';
 import AOScreen from './screens/AOScreen';
 import RVScreen from './screens/RVScreen';
 import RMScreen from './screens/RMScreen';
 import RPScreen from './screens/RPScreen';
+import InfoECGScreen from './screens/InfoECGScreen';
+import InfoUpdateScreen from './screens/InfoUpdateScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +21,7 @@ function App() {
           name="Home" 
           component={HomeScreen}
           options={{
+            headerShown: false,
             title: 'Escala de Coma de Glasgow',
             headerStyle: {
               backgroundColor: '#f4511e',
@@ -90,6 +93,34 @@ function App() {
           component={ResultScreen} 
           options={{
             title: 'Resultado',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            }
+          }}
+        />
+        <Stack.Screen 
+          name="InfoECG" 
+          component={InfoECGScreen} 
+          options={{
+            title: 'O que é ECG?',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            }
+          }}
+        />
+        <Stack.Screen 
+          name="InfoUpdate" 
+          component={InfoUpdateScreen} 
+          options={{
+            title: 'O que mudou?',
             headerStyle: {
               backgroundColor: '#f4511e',
             },
