@@ -22,7 +22,7 @@ export default function RPScreen({navigation}) {
   return (
     <HeaderContainer>
         <Header 
-      colors={['#EBF2F6', '#EBF2F6']}
+      colors={['#ffffff', '#ffffff']}
       >
         <Wrapper>
           <Actions>

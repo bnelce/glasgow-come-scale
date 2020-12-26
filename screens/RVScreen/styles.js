@@ -1,6 +1,7 @@
   
 import styled from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient'
+import colors from '../../constants/Colors';
 
 export const Wrapper = styled.ScrollView`
   flex: 1;
@@ -17,7 +18,7 @@ export const HeaderContainer = styled.SafeAreaView`
 `;
 
 export const Title = styled.Text`
-  color: #fff;
+  color: ${colors.light.buttonText};
   font-size: 16px;
   font-weight: bold;
 `;
@@ -31,7 +32,7 @@ export const Action = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(2, 135, 250, 0.6);
   border-radius: 5px;
   margin: 0 10px;
   margin-bottom: 20px;
@@ -39,7 +40,7 @@ export const Action = styled.TouchableOpacity`
 `;
 
 export const ActionLabel = styled.Text`
-  color: #fff;
+  color: ${colors.light.buttonText};
   font-size: 16px;
   margin: 10px;
 `;

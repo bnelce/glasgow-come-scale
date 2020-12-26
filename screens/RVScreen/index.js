@@ -23,7 +23,7 @@ export default function RVScreen({navigation}) {
   return (
     <HeaderContainer>
         <Header 
-      colors={['#222020', '#0B0406']}
+      colors={['#fff', '#fff']}
       >
         <Wrapper>
           <Actions>

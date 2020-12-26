@@ -15,6 +15,7 @@ export default {
     bannerBackground: '#DBEFFF',
     bannerText: '#1F2C3A',
     borderButton: '#EBF2F6',
+    buttonText: '#0287FA',
     tint: tintColorLight,
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorLight,
