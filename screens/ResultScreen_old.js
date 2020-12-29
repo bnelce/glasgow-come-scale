@@ -21,6 +21,8 @@ export default function ResultScreen({navigation}) {
       setRM(vRM);
       setRP(vRP);
 
+      const vTotal = parseInt(vAO) + parseInt(vRV) + parseInt(vRM) - parseInt(vRP);
+      setTotal(vTotal);
 
     } catch(e) {
       // error reading value
@@ -28,12 +30,9 @@ export default function ResultScreen({navigation}) {
     }
  }
 
-
  useEffect(() => {
   getAO();
 }, []);
-
-
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -42,7 +41,7 @@ export default function ResultScreen({navigation}) {
       <Text>RV: {rv}</Text>
       <Text>RM: {rm}</Text>
       <Text>RP: {rp}</Text>
-      <Text>Total: </Text>
+      <Text>Total: {total}</Text>
     </View>
   );
 }

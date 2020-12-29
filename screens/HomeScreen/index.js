@@ -42,7 +42,7 @@ export default function HomeScreen({navigation}) {
             </Value>            
           </BalanceContainer>
 
-          <Info>Escolha o protocolo abaixo</Info>
+          <Info>Inicie o protocolo no botão abaixo</Info>
 
           <Actions>
             <Action onPress={handleButton1}>
@@ -50,10 +50,10 @@ export default function HomeScreen({navigation}) {
               <ActionLabel>Adulto</ActionLabel>
             </Action>
 
-            <Action>
+            {/*<Action>
               <FontAwesome name="child" size={20} color="#fff" />
               <ActionLabel>Infantil</ActionLabel>
-            </Action>
+            </Action>*/}
           </Actions>
         </HeaderContainer>
       </Header>

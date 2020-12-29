@@ -94,6 +94,7 @@ function App() {
           name="Resultado" 
           component={ResultScreen} 
           options={{
+            headerShown: false,
             title: 'Resultado',
             headerStyle: {
               backgroundColor: colors.light.tint,
