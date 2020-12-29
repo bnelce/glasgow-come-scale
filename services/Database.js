@@ -40,7 +40,6 @@ const calculate = async () => {
     }
 }
 
-
 const storeAO = async (value) => {
     try {
       const vl = await AsyncStorage.setItem('@storage_KeyAO', value);
@@ -82,11 +81,14 @@ const storeAO = async (value) => {
       console.log(e);
     }
   }
-
   
 const getTotal = async () => {
     try {
-      const value = await AsyncStorage.getItem('@storage_KeyTotal')
+      const value = await AsyncStorage.getItem('@storage_KeyTotal');
+      console.log('getTotal',value);
+      if(value == null){
+        return 0;
+      }
       return value
     } catch(e) {
       // error reading value
@@ -95,7 +97,11 @@ const getTotal = async () => {
 
 const getAO = async () => {
     try {
-      const value = await AsyncStorage.getItem('@storage_KeyAO')
+      const value = await AsyncStorage.getItem('@storage_KeyAO');
+      console.log('getAO',value);
+      if(value == null){
+        return 0;
+      }
       return value
     } catch(e) {
       // error reading value
@@ -105,7 +111,11 @@ const getAO = async () => {
 
 const getRV = async () => {
     try {
-      const value = await AsyncStorage.getItem('@storage_KeyRV')
+      const value = await AsyncStorage.getItem('@storage_KeyRV');
+      console.log('getRV',value);
+      if(value == null){
+        return 0;
+      }
       return value
     } catch(e) {
       // error reading value
@@ -115,7 +125,11 @@ const getRV = async () => {
 
  const getRM = async () => {
     try {
-      const value = await AsyncStorage.getItem('@storage_KeyRM')
+      const value = await AsyncStorage.getItem('@storage_KeyRM');
+      console.log('getRM',value);
+      if(value == null){
+        return 0;
+      }
       return value
     } catch(e) {
       // error reading value
@@ -125,7 +139,8 @@ const getRV = async () => {
 
 const getRP = async () => {
     try {
-      const value = await AsyncStorage.getItem('@storage_KeyRP')
+      const value = await AsyncStorage.getItem('@storage_KeyRP');
+      console.log('getRP',value);
       return value
     } catch(e) {
       // error reading value

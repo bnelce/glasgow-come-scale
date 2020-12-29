@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
+import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import {
   Wrapper,
   Header,
@@ -9,19 +10,28 @@ import {
   ActionLabel,
 } from './styles';
 
-import { initialStore, getAO, getRV, getRM, getRP, getTotal } from '../../services/Database';
-
 export default function AOScreen({navigation}) {
+  const [value, setValue] = useState('0');
+  const { getItem, setItem } = useAsyncStorage('@keyAO');
 
-  useEffect(() => {
-    () => initialStore();
-  });
-  
-  const handleButton1 = () => {
+  const readItemFromStorage = async () => {
+    const item = await getItem();
+    setValue(item);
+  };
+
+  const writeItemToStorage = async newValue => {
+    await setItem(newValue);
+    setValue(newValue);
+  };  
+
+  const handleButton1 = (vl) => {
+    writeItemToStorage(vl)
     navigation.navigate('RV');
   }
 
-
+  useEffect(() => {
+    //readItemFromStorage();
+  }, [value]);
 
   return (
     <HeaderContainer>
@@ -29,21 +39,20 @@ export default function AOScreen({navigation}) {
       colors={['#ffffff', '#ffffff']}
       >
         <Wrapper>
-          <Text>{() => getAO()} {() => getRV()} {() => getRM()} {() => getRP()} {() => getTotal()}</Text>
-          <Actions>
-            <Action onPress={handleButton1}>
+          <Actions>          
+            <Action onPress={() => handleButton1('4')}>
               <ActionLabel>4 - Olhos abertos previamente a estimulação</ActionLabel>
             </Action> 
-            <Action onPress={handleButton1}>
+            <Action onPress={() =>handleButton1('3')}>
               <ActionLabel>3 - Abertura ocular após a ordem em tom de voz normal ou alta</ActionLabel>
             </Action>
-            <Action onPress={handleButton1}>
+            <Action onPress={() => handleButton1('2')}>
               <ActionLabel>2 - Abertura ocular após a estimulação da extremidade dos dedos</ActionLabel>
             </Action>
-            <Action onPress={handleButton1}>
+            <Action onPress={() => handleButton1('1')}>
               <ActionLabel>1 - Ausência persistente de abertura ocular, sem fatores de interferência</ActionLabel>
             </Action>
-            <Action onPress={handleButton1}>
+            <Action onPress={() => handleButton1('0')}>
               <ActionLabel>NT - Olhos fechado devido a fator local</ActionLabel>
             </Action> 
           </Actions> 
