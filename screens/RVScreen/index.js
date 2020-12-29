@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import {  StyleSheet, Text } from 'react-native';
 import {
   Wrapper,
   Header,
@@ -10,7 +10,6 @@ import {
 } from './styles';
 
 export default function RVScreen({navigation}) {
-
   
   const handleButton1 = () => {
     navigation.navigate('RM', {

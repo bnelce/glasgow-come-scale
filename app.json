@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "glasgow-come-scale",
-    "slug": "glasgow-come-scale",
+    "name": "Nova Escala de Glasgow",
+    "slug": "glasgow-coma-scale",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,10 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+      "package": "com.bravolabs.glasgowcomascale"
     },
     "web": {
       "favicon": "./assets/favicon.png"

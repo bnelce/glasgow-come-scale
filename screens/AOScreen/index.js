@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, Text } from 'react-native';
 import {
   Wrapper,
   Header,
@@ -9,16 +9,19 @@ import {
   ActionLabel,
 } from './styles';
 
+import { initialStore, getAO, getRV, getRM, getRP, getTotal } from '../../services/Database';
+
 export default function AOScreen({navigation}) {
 
+  useEffect(() => {
+    () => initialStore();
+  });
   
   const handleButton1 = () => {
-    navigation.navigate('RV', {
-      value: {
-        value: 1,
-      }
-      });
+    navigation.navigate('RV');
   }
+
+
 
   return (
     <HeaderContainer>
@@ -26,6 +29,7 @@ export default function AOScreen({navigation}) {
       colors={['#ffffff', '#ffffff']}
       >
         <Wrapper>
+          <Text>{() => getAO()} {() => getRV()} {() => getRM()} {() => getRP()} {() => getTotal()}</Text>
           <Actions>
             <Action onPress={handleButton1}>
               <ActionLabel>4 - Olhos abertos previamente a estimulação</ActionLabel>
