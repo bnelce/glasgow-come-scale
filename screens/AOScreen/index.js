@@ -14,11 +14,6 @@ export default function AOScreen({navigation}) {
   const [value, setValue] = useState('0');
   const { getItem, setItem } = useAsyncStorage('@keyAO');
 
-  const readItemFromStorage = async () => {
-    const item = await getItem();
-    setValue(item);
-  };
-
   const writeItemToStorage = async newValue => {
     await setItem(newValue);
     setValue(newValue);
