@@ -16,12 +16,6 @@ export const HeaderContainer = styled.SafeAreaView`
   justify-content: center;
 `;
 
-export const Title = styled.Text`
-  color: ${colors.light.buttonText};
-  font-size: 16px;
-  font-weight: bold;
-`;
-
 export const Actions = styled.View`
   flex-direction: column;
   margin-top: 20px;
@@ -41,18 +35,4 @@ export const ActionLabel = styled.Text`
   color: ${colors.light.buttonText};
   font-size: 16px;
   margin: 10px;
-`;
-
-export const PaymentMethods = styled.View`
-  margin-top: 25px;
-  padding: 0 16px;
-`;
-
-export const PaymentMethodsTitle = styled.Text`
-  color: #8e8e93;
-  text-transform: uppercase;
-`;
-
-export const Img = styled.Image`
-  width: 60px;
 `;
