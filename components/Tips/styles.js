@@ -14,7 +14,7 @@ export const Container = styled.ScrollView.attrs(() => ({
 export const Option = styled.TouchableOpacity`
   background: ${colors.light.bannerBackground};
   width: 150px;
-  height: 200px;
+  height: 150px;
   border-radius: 8px;
   padding: 15px;
   justify-content: space-between;

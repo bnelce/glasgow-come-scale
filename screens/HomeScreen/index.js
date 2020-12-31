@@ -35,15 +35,12 @@ export default function HomeScreen({ navigation }) {
               <Bold>Escala de Glasgow</Bold>
             </Value>
           </BalanceContainer>
-
           <Info>Inicie o protocolo no botão abaixo</Info>
-
           <Actions>
             <Action onPress={handleButton1}>
               <FontAwesome name="male" size={30} color="#fff" />
               <ActionLabel>Adulto</ActionLabel>
             </Action>
-
             {/*<Action>
               <FontAwesome name="child" size={20} color="#fff" />
               <ActionLabel>Infantil</ActionLabel>
