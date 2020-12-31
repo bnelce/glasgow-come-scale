@@ -1,11 +1,7 @@
 import React from 'react';
 import { Share, Linking } from 'react-native';
 import { Container, Option, Title, Img } from './styles'
-import img8 from '../../assets/images/08.png'
-import img9 from '../../assets/images/09.png'
 import img10 from '../../assets/images/10.png'
-import img11 from '../../assets/images/11.png'
-// import img12 from '../../assets/images/12.png'
 import colors from '../../constants/Colors';
 const onShare = async () => {
   try {

@@ -20,7 +20,10 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.bravolabs.glasgowcomascale"
+      "package": "com.bravolabs.glasgowcomascale",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-6000091467232844~1074298978" 
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

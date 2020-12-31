@@ -1,7 +1,6 @@
-  
-import styled from 'styled-components/native';
-import { LinearGradient } from 'expo-linear-gradient'
-import colors from '../../constants/Colors';
+import styled from "styled-components/native";
+import { LinearGradient } from "expo-linear-gradient";
+import colors from "../../constants/Colors";
 
 export const Wrapper = styled.ScrollView`
   flex: 1;
@@ -36,7 +35,6 @@ export const Action = styled.TouchableOpacity`
   border-radius: 5px;
   margin: 0 10px;
   margin-bottom: 20px;
-
 `;
 
 export const ActionLabel = styled.Text`
@@ -44,7 +42,6 @@ export const ActionLabel = styled.Text`
   font-size: 16px;
   margin: 10px;
 `;
-
 
 export const PaymentMethods = styled.View`
   margin-top: 25px;
@@ -59,4 +56,3 @@ export const PaymentMethodsTitle = styled.Text`
 export const Img = styled.Image`
   width: 60px;
 `;
-

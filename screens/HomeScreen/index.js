@@ -1,8 +1,5 @@
-
-import React, { useEffect } from 'react';
-import {
-  FontAwesome,
-} from '@expo/vector-icons';
+import React from "react";
+import { FontAwesome } from "@expo/vector-icons";
 import {
   Wrapper,
   Header,
@@ -19,27 +16,24 @@ import {
   UseBalanceTitle,
   PaymentMethods,
   PaymentMethodsTitle,
-} from './styles';
+} from "./styles";
 
-import Tips from '../../components/Tips';
+import Tips from "../../components/Tips";
 
-export default function HomeScreen({navigation}) {
-
+export default function HomeScreen({ navigation }) {
   const handleButton1 = () => {
-    navigation.navigate('AO');
-  }
+    navigation.navigate("AO");
+  };
 
   return (
     <Wrapper>
-      <Header 
-      colors={['#285ECD', '#3D3AAA']}
-      >
+      <Header colors={["#285ECD", "#3D3AAA"]}>
         <HeaderContainer>
           <Title>Nova</Title>
           <BalanceContainer>
             <Value>
               <Bold>Escala de Glasgow</Bold>
-            </Value>            
+            </Value>
           </BalanceContainer>
 
           <Info>Inicie o protocolo no botão abaixo</Info>
@@ -61,12 +55,9 @@ export default function HomeScreen({navigation}) {
         <UseBalanceTitle />
       </UseBalance>
       <PaymentMethods>
-        <PaymentMethodsTitle>
-          Informações
-        </PaymentMethodsTitle>
+        <PaymentMethodsTitle>Informações</PaymentMethodsTitle>
       </PaymentMethods>
-      <Tips navigation={navigation}/>
+      <Tips navigation={navigation} />
     </Wrapper>
   );
 }
-
