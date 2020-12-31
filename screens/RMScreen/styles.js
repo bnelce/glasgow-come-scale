@@ -20,7 +20,7 @@ export const HeaderContainer = styled.SafeAreaView`
 export const Actions = styled.View`
   flex-direction: column;
   margin-top: 20px;
-`;
+`;  
 
 export const Action = styled.TouchableOpacity`
   flex-direction: row;

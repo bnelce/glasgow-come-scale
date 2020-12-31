@@ -1,6 +1,13 @@
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+  setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+import {
   Wrapper,
   Header,
   HeaderContainer,
@@ -21,6 +28,10 @@ import {
 import Tips from "../../components/Tips";
 
 export default function HomeScreen({ navigation }) {
+
+  // Set global test device ID
+  const device = async () => { await setTestDeviceIDAsync('EMULATOR');}
+
   const handleButton1 = () => {
     navigation.navigate("AO");
   };
@@ -55,6 +66,11 @@ export default function HomeScreen({ navigation }) {
         <PaymentMethodsTitle>Informações</PaymentMethodsTitle>
       </PaymentMethods>
       <Tips navigation={navigation} />
+      <AdMobBanner
+        bannerSize="fullBanner"
+        adUnitID="ca-app-pub-6000091467232844~1074298978" // Test ID, Replace with your-admob-unit-id
+        servePersonalizedAds // true or false
+        onDidFailToReceiveAdWithError={this.bannerError} />
     </Wrapper>
   );
 }

@@ -106,10 +106,10 @@ export default function ResultScreen({ navigation }) {
         <UseBalanceTitle />
       </UseBalance>
       <Actions>
-        <Action>
+        {/*<Action>
           <FontAwesome name="share-alt" size={30} color="#000" />
           <ActionLabel>Compartilhar</ActionLabel>
-        </Action>
+        </Action>*/}
         <Action onPress={handleReset}>
           <FontAwesome name="repeat" size={20} color="#000" />
           <ActionLabel>Repetir</ActionLabel>

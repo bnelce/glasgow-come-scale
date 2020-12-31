@@ -9,7 +9,6 @@ export default function InfoECGScreen({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.light.background }}>
       <View style={styles.container}>
         <ScrollView>
-          <Image source={img10} />
           <Text style={styles.title}>
             O que é a Escala de Coma de Glasglow?
           </Text>

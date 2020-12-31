@@ -9,7 +9,6 @@ export default function InfoUpdateScreen({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.light.background }}>
       <View style={styles.container}>
         <ScrollView>
-          <Image source={img10} />
           <Text style={styles.title}>O que há de novo na ECG?</Text>
           <Text style={styles.text}>
             A Escala de Coma de Glasgow fornece um índice clínico do
