@@ -3,6 +3,9 @@ import { Image, View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import img10 from "../../assets/images/10.png";
 import colors from "../../constants/Colors";
+import {
+  AdMobBanner,  
+} from 'expo-ads-admob';
 
 export default function InfoUpdateScreen({ navigation }) {
   return (
@@ -49,6 +52,11 @@ export default function InfoUpdateScreen({ navigation }) {
             prática clínica.
           </Text>
         </ScrollView>
+        <AdMobBanner
+          bannerSize="fullBanner"
+          adUnitID="ca-app-pub-6000091467232844/4391755126" // Test ID, Replace with your-admob-unit-id
+          servePersonalizedAds // true or false
+          onDidFailToReceiveAdWithError={this.bannerError} />
       </View>
     </SafeAreaView>
   );

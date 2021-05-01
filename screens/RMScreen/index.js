@@ -8,6 +8,10 @@ import {
   Action,
   ActionLabel,
 } from "./styles";
+import {
+  AdMobBanner,  
+} from 'expo-ads-admob';
+
 
 export default function RMScreen({ navigation }) {
   const [value, setValue] = useState("0");
@@ -33,6 +37,7 @@ export default function RMScreen({ navigation }) {
   };
 
   return (
+    <>
     <HeaderContainer>
       <Header colors={["#fff", "#fff"]}>
         <Wrapper>
@@ -78,5 +83,12 @@ export default function RMScreen({ navigation }) {
         </Wrapper>
       </Header>
     </HeaderContainer>
+    <AdMobBanner
+    style={{position: 'absolute', left: 0, right: 0, bottom: 0}}
+  bannerSize="fullBanner"
+  adUnitID="ca-app-pub-6000091467232844/4391755126" // Test ID, Replace with your-admob-unit-id
+  servePersonalizedAds // true or false
+  onDidFailToReceiveAdWithError={this.bannerError} />
+  </>
   );
 }

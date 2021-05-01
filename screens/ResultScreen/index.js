@@ -16,6 +16,10 @@ import {
   UseBalanceTitle,
 } from "./styles";
 
+import {
+  AdMobBanner,  
+} from 'expo-ads-admob';
+
 export default function ResultScreen({ navigation }) {
   const [ao, setAO] = useState("0");
   const [rv, setRV] = useState("0");
@@ -83,6 +87,7 @@ export default function ResultScreen({ navigation }) {
   };
 
   return (
+    <>
     <Wrapper>
       <Header colors={[color1, color2]}>
         <HeaderContainer>
@@ -116,5 +121,12 @@ export default function ResultScreen({ navigation }) {
         </Action>
       </Actions>
     </Wrapper>
+    <AdMobBanner
+    style={{position: 'absolute', left: 0, right: 0, bottom: 0}}
+  bannerSize="fullBanner"
+  adUnitID="ca-app-pub-6000091467232844/4391755126" // Test ID, Replace with your-admob-unit-id
+  servePersonalizedAds // true or false
+  onDidFailToReceiveAdWithError={this.bannerError} />
+  </>
   );
 }

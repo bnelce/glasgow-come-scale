@@ -81,6 +81,15 @@ export const UseBalance = styled.View`
   justify-content: space-between;
 `;
 
+export const BannerContainer = styled.View`
+  background: #dddddd;
+  position: absolute,
+  left: 0,
+  right: 0, 
+  bottom: 0
+`;
+
+
 export const UseBalanceTitle = styled.Text`
   color: #fff;
   font-size: 16px;

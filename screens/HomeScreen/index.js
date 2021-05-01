@@ -2,13 +2,10 @@ import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import {
   AdMobBanner,
-  AdMobInterstitial,
-  PublisherBanner,
-  AdMobRewarded,
-  setTestDeviceIDAsync,
 } from 'expo-ads-admob';
 import {
   Wrapper,
+  BannerContainer,
   Header,
   HeaderContainer,
   Title,
@@ -37,6 +34,7 @@ export default function HomeScreen({ navigation }) {
   };
 
   return (
+    <>
     <Wrapper>
       <Header colors={["#285ECD", "#3D3AAA"]}>
         <HeaderContainer>
@@ -60,17 +58,19 @@ export default function HomeScreen({ navigation }) {
         </HeaderContainer>
       </Header>
       <UseBalance>
-        <UseBalanceTitle />
+        
       </UseBalance>
       <PaymentMethods>
         <PaymentMethodsTitle>Informações</PaymentMethodsTitle>
       </PaymentMethods>
-      <Tips navigation={navigation} />
-      <AdMobBanner
-        bannerSize="fullBanner"
-        adUnitID="ca-app-pub-6000091467232844~1074298978" // Test ID, Replace with your-admob-unit-id
-        servePersonalizedAds // true or false
-        onDidFailToReceiveAdWithError={this.bannerError} />
+      <Tips navigation={navigation} />              
     </Wrapper>
+    <AdMobBanner
+    style={{position: 'absolute', left: 0, right: 0, bottom: 0}}
+  bannerSize="fullBanner"
+  adUnitID="ca-app-pub-6000091467232844/4391755126" // Test ID, Replace with your-admob-unit-id
+  servePersonalizedAds // true or false
+  onDidFailToReceiveAdWithError={this.bannerError} />
+  </>    
   );
 }
